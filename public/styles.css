@@ -1,0 +1,235 @@
+#blackbox {
+    position:fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    background-color: black;
+    opacity: 0.9;
+    font-size:12px;
+    font-family: Tahoma, Arial;
+    color: white;
+    padding:3px 0px;
+    z-index: 100000;
+}
+
+#blackbox:hover {
+    opacity: 1;
+}
+
+#blackbox a {
+    color: white;
+    font-weight: normal;
+    text-decoration: none;
+    padding: 2px 20px 2px 20px;
+
+}
+
+#blackbox div.debug-panel {
+    overflow:auto;
+    max-height:400px;
+    display:none;
+    padding: 5px;
+    font-family: "Lucida Console";
+
+}
+
+#blackbox table tbody tr td.number {
+    text-align: right;
+}
+
+#blackbox table tbody tr td.err-name {
+    width:60px;
+}
+
+#blackbox table tbody tr td {
+    padding: 0px 15px;
+    margin: 0;
+    vertical-align: top;
+    line-height:14px;
+}
+
+#blackbox a:hover {
+    text-decoration: underline;
+}
+
+#blackbox .globals {
+    background-image: url(icons/wrench.png);
+    background-repeat: no-repeat;
+}
+#blackbox .profiler {
+    background-image: url(icons/lighting.png);
+    background-repeat: no-repeat;
+}
+#blackbox .filters {
+    background-image: url(icons/link.png);
+    background-repeat: no-repeat;
+}
+#blackbox .database {
+    background-image: url(icons/db.png);
+    background-repeat: no-repeat;
+}
+#blackbox .errors {
+    background-image: url(icons/attention.png);
+    background-repeat: no-repeat;
+}
+#blackbox .close {
+    background-image: url(icons/delete.png);
+    background-repeat: no-repeat;
+}
+
+#blackbox pre{
+    padding:0;
+    margin: 0px 0px 0px 0px
+}
+
+/*
+
+Sunburst-like style (c) Vasily Polovnyov <vast@whiteants.net>
+
+*/
+
+#blackbox pre code {
+  font: 12px / 14px 'Lucida Console', 'courier new', monospace !important;
+  color: #f8f8f8;
+  background: #000 !important;
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+#blackbox pre {
+  background: #000 !important;
+}
+
+#blackbox pre .comment,
+#blackbox pre .template_comment,
+#blackbox pre .javadoc {
+  color: #aeaeae;
+  font-style: italic;
+}
+
+#blackbox pre .keyword,
+#blackbox pre .ruby .function .keyword {
+  color: #E28964;
+}
+
+#blackbox pre .function .keyword,
+#blackbox pre .sub .keyword,
+#blackbox pre .method,
+#blackbox pre .list .title {
+  color: #99CF50;
+}
+
+#blackbox pre .string,
+#blackbox pre .attribute .value,
+#blackbox pre .cdata,
+#blackbox pre .filter .argument,
+#blackbox pre .attr_selector,
+#blackbox pre .apache .cbracket,
+#blackbox pre .date,
+#blackbox pre .tex .command {
+  color: #65B042;
+}
+
+#blackbox pre .subst {
+  color: #DAEFA3;
+}
+
+#blackbox pre .regexp {
+  color: #E9C062;
+}
+
+#blackbox pre .function .title,
+#blackbox pre .sub .identifier,
+#blackbox pre .pi,
+#blackbox pre .tag,
+#blackbox pre .tag .keyword,
+#blackbox pre .decorator,
+#blackbox pre .ini .title,
+#blackbox pre .shebang {
+  color: #89BDFF;
+}
+
+#blackbox pre .class .title,
+#blackbox pre .smalltalk .class,
+#blackbox pre .javadoctag,
+#blackbox pre .yardoctag,
+#blackbox pre .phpdoc {
+  text-decoration: underline;
+}
+
+#blackbox pre .symbol,
+#blackbox pre .ruby .symbol .string,
+#blackbox pre .ruby .symbol .keyword,
+#blackbox pre .ruby .symbol .keymethods,
+#blackbox pre .number {
+  color: #3387CC;
+}
+
+#blackbox pre .params,
+#blackbox pre .variable {
+  color: #3E87E3;
+}
+
+#blackbox pre .css .keyword,
+#blackbox pre .pseudo,
+#blackbox pre .tex .special {
+  color: #CDA869;
+}
+
+#blackbox pre .css .class {
+  color: #9B703F;
+}
+
+#blackbox pre .rules .keyword {
+  color: #C5AF75;
+}
+
+#blackbox pre .rules .value {
+  color: #CF6A4C;
+}
+
+#blackbox pre .css .id {
+  color: #8B98AB;
+}
+
+#blackbox pre .annotation,
+#blackbox pre .apache .sqbracket,
+#blackbox pre .nginx .built_in {
+  color: #9B859D;
+}
+
+#blackbox pre .preprocessor {
+  color: #8996A8;
+}
+
+#blackbox pre .hexcolor,
+#blackbox pre .css .value .number {
+  color: #DD7B3B;
+}
+
+#blackbox pre .css .function {
+  color: #DAD085;
+}
+
+#blackbox pre .diff .header,
+#blackbox pre .chunk,
+#blackbox pre .tex .formula {
+  background-color: #0E2231;
+  color: #F8F8F8;
+  font-style: italic;
+}
+
+#blackbox pre .diff .change {
+  background-color: #4A410D;
+  color: #F8F8F8;
+}
+
+#blackbox pre .addition {
+  background-color: #253B22;
+  color: #F8F8F8;
+}
+
+#blackbox pre .deletion {
+  background-color: #420E09;
+  color: #F8F8F8;
+}
