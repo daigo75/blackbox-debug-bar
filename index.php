@@ -21,6 +21,19 @@ require_once BLACKBOX_DIR."/application/BlackBox/Exception.php";
 
 BlackBox::init();
 
+add_action("phpmailer_init", "mmm");
+
+class MailerMock {
+    public function Send()
+    {
+        echo "mailing...";
+    }
+}
+
+function mmm($mailer) {
+    $mailer = new MailerMock;
+}
+
 
 
 
