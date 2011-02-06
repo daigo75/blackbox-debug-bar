@@ -2,8 +2,11 @@
 Contributors: gwin
 Tags: debugging, debug bar
 Requires at least: 3.0.0
-Tested up to: 3.0.0
+Tested up to: 3.0.4
 Stable tag: trunk
+Plugin Name: Block Bad Queries
+Plugin URI: http://ditio.net/2011/01/29/wordpress-debug-bar-plugin-blackbox/
+Author URI: http://ditio.net/
 
 BlackBox is a plugin for plugin and theme developers. It collects and displays useful debug information (errors, executed queries, globals, profiler)
 
@@ -22,11 +25,9 @@ How can it help you with development:
 
 This section describes how to install the plugin and get it working.
 
-e.g.
-
 1. Upload plugin to `/wp-content/plugins/` directory
-1. Activate the plugin through the 'Plugins' menu in WordPress
-1. Done!
+2. Activate the plugin through the 'Plugins' menu in WordPress
+3. Done!
 
 == Screenshots ==
 
