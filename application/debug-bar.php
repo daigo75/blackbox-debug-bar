@@ -18,8 +18,8 @@ foreach($bb->getErrors() as $error) {
 
 ?>
 
-<script type="text/javascript" src="<?php bloginfo("url") ?>/wp-content/plugins/blackbox-debug-bar/public/highlight.pack.js"></script>
-<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo("url") ?>/wp-content/plugins/blackbox-debug-bar/public/styles.css" />
+<script type="text/javascript" src="<?php bloginfo("wpurl") ?>/wp-content/plugins/blackbox-debug-bar/public/highlight.pack.js"></script>
+<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo("wpurl") ?>/wp-content/plugins/blackbox-debug-bar/public/styles.css" />
 
 <script type="text/javascript">
 

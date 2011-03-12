@@ -4,7 +4,7 @@ Plugin Name: BlackBox
 Plugin URI: http://ditio.net/
 Description: BlackBox is designed for WordPress plugin and theme developers, it uses unobstrusive box that contatins useful informatiom (executed queries, global variables, notices, warnings and profiler). BlackBox should be used in development environment only
 Author: Grzegorz Winiarski
-Version: 0.1
+Version: 0.1.1
 Author URI: http://ditio.net/
 */
 

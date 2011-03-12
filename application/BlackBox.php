@@ -62,11 +62,11 @@ class BlackBox
     {
         $this->_profiler = new BlackBox_Profiler();
         $this->_globals = array(
-            'get' => $_GET,
-            'post' => $_POST,
-            'cookie' => $_COOKIE,
-            'session' => $_SESSION,
-            'server' => $_SERVER
+            'get' => isset($_GET) ? $_GET : array(),
+            'post' => isset($_POST) ? $_POST : array(),
+            'cookie' => isset($_COOKIE) ? $_COOKIE : array(),
+            'session' => isset($_SESSION) ? $_SESSION : array(),
+            'server' => isset($_SERVER) ? $_SERVER : array()
         );
     }
 
@@ -124,13 +124,13 @@ class BlackBox
 
     public static function errorHandler($errno, $errstr, $errfile, $errline)
     {
-        if($errno == E_NOTICE) {
+        if($errno == 8) {
             $errname = "Notice";
-        } elseif ($errno == E_WARNING) {
+        } elseif ($errno == 2) {
             $errname = "Warning";
-        } elseif ($errno == E_DEPRECATED) {
+        } elseif ($errno == 8192) {
             $errname = "Deprecated";
-        } elseif ($errno == E_STRICT) {
+        } elseif ($errno == 2048) {
             $errname = "Strict";
         } else {
             $errname = "Unknown";
@@ -146,7 +146,8 @@ class BlackBox
                 "message" => $errstr,
                 "file" => $errfile,
                 "name" => $errname,
-                "line" => $errline
+                "line" => $errline,
+                "count" => 0
             );
         }
 
