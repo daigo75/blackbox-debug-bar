@@ -47,14 +47,14 @@ var WpDebugBar = {
     },
 
     close: function() {
-        document.getElementById("blackbox").style.display = "none";
+        document.getElementById("blackbox-web-debug").style.display = "none";
     }
 
 }
 
 </script>
 
-<div id="blackbox">
+<div id="blackbox-web-debug">
 &nbsp;
 <a href="javascript:WpDebugBar.switchPanel('globals')" class="globals">Globals</a>
 <a href="javascript:WpDebugBar.switchPanel('profiler')" class="profiler">Profiler (<?php echo $time ?> ms)</a>

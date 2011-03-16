@@ -1,4 +1,4 @@
-#blackbox {
+#blackbox-web-debug  {
     position:fixed;
     top: 0;
     left: 0;
@@ -16,7 +16,7 @@
     opacity: 1;
 }
 
-#blackbox a {
+#blackbox-web-debug  a {
     color: white;
     font-weight: normal;
     text-decoration: none;
@@ -24,7 +24,7 @@
 
 }
 
-#blackbox div.debug-panel {
+#blackbox-web-debug  div.debug-panel {
     overflow:auto;
     max-height:400px;
     display:none;
@@ -33,51 +33,51 @@
 
 }
 
-#blackbox table tbody tr td.number {
+#blackbox-web-debug  table tbody tr td.number {
     text-align: right;
 }
 
-#blackbox table tbody tr td.err-name {
+#blackbox-web-debug  table tbody tr td.err-name {
     width:60px;
 }
 
-#blackbox table tbody tr td {
+#blackbox-web-debug  table tbody tr td {
     padding: 0px 15px;
     margin: 0;
     vertical-align: top;
     line-height:14px;
 }
 
-#blackbox a:hover {
+#blackbox-web-debug  a:hover {
     text-decoration: underline;
 }
 
-#blackbox .globals {
+#blackbox-web-debug  .globals {
     background-image: url(icons/wrench.png);
     background-repeat: no-repeat;
 }
-#blackbox .profiler {
+#blackbox-web-debug  .profiler {
     background-image: url(icons/lighting.png);
     background-repeat: no-repeat;
 }
-#blackbox .filters {
+#blackbox-web-debug  .filters {
     background-image: url(icons/link.png);
     background-repeat: no-repeat;
 }
-#blackbox .database {
+#blackbox-web-debug  .database {
     background-image: url(icons/db.png);
     background-repeat: no-repeat;
 }
-#blackbox .errors {
+#blackbox-web-debug  .errors {
     background-image: url(icons/attention.png);
     background-repeat: no-repeat;
 }
-#blackbox .close {
+#blackbox-web-debug  .close {
     background-image: url(icons/delete.png);
     background-repeat: no-repeat;
 }
 
-#blackbox pre{
+#blackbox-web-debug  pre{
     padding:0;
     margin: 0px 0px 0px 0px
 }
@@ -88,7 +88,7 @@ Sunburst-like style (c) Vasily Polovnyov <vast@whiteants.net>
 
 */
 
-#blackbox pre code {
+#blackbox-web-debug  pre code {
   font: 12px / 14px 'Lucida Console', 'courier new', monospace !important;
   color: #f8f8f8;
   background: #000 !important;
@@ -96,140 +96,140 @@ Sunburst-like style (c) Vasily Polovnyov <vast@whiteants.net>
   margin: 0px !important;
 }
 
-#blackbox pre {
+#blackbox-web-debug  pre {
   background: #000 !important;
 }
 
-#blackbox pre .comment,
-#blackbox pre .template_comment,
-#blackbox pre .javadoc {
+#blackbox-web-debug  pre .comment,
+#blackbox-web-debug  pre .template_comment,
+#blackbox-web-debug  pre .javadoc {
   color: #aeaeae;
   font-style: italic;
 }
 
-#blackbox pre .keyword,
-#blackbox pre .ruby .function .keyword {
+#blackbox-web-debug  pre .keyword,
+#blackbox-web-debug  pre .ruby .function .keyword {
   color: #E28964;
 }
 
-#blackbox pre .function .keyword,
-#blackbox pre .sub .keyword,
-#blackbox pre .method,
-#blackbox pre .list .title {
+#blackbox-web-debug  pre .function .keyword,
+#blackbox-web-debug  pre .sub .keyword,
+#blackbox-web-debug  pre .method,
+#blackbox-web-debug  pre .list .title {
   color: #99CF50;
 }
 
-#blackbox pre .string,
-#blackbox pre .attribute .value,
-#blackbox pre .cdata,
-#blackbox pre .filter .argument,
-#blackbox pre .attr_selector,
-#blackbox pre .apache .cbracket,
-#blackbox pre .date,
-#blackbox pre .tex .command {
+#blackbox-web-debug  pre .string,
+#blackbox-web-debug  pre .attribute .value,
+#blackbox-web-debug  pre .cdata,
+#blackbox-web-debug  pre .filter .argument,
+#blackbox-web-debug  pre .attr_selector,
+#blackbox-web-debug  pre .apache .cbracket,
+#blackbox-web-debug  pre .date,
+#blackbox-web-debug  pre .tex .command {
   color: #65B042;
 }
 
-#blackbox pre .subst {
+#blackbox-web-debug  pre .subst {
   color: #DAEFA3;
 }
 
-#blackbox pre .regexp {
+#blackbox-web-debug  pre .regexp {
   color: #E9C062;
 }
 
-#blackbox pre .function .title,
-#blackbox pre .sub .identifier,
-#blackbox pre .pi,
-#blackbox pre .tag,
-#blackbox pre .tag .keyword,
-#blackbox pre .decorator,
-#blackbox pre .ini .title,
-#blackbox pre .shebang {
+#blackbox-web-debug  pre .function .title,
+#blackbox-web-debug  pre .sub .identifier,
+#blackbox-web-debug  pre .pi,
+#blackbox-web-debug  pre .tag,
+#blackbox-web-debug  pre .tag .keyword,
+#blackbox-web-debug  pre .decorator,
+#blackbox-web-debug  pre .ini .title,
+#blackbox-web-debug  pre .shebang {
   color: #89BDFF;
 }
 
-#blackbox pre .class .title,
-#blackbox pre .smalltalk .class,
-#blackbox pre .javadoctag,
-#blackbox pre .yardoctag,
-#blackbox pre .phpdoc {
+#blackbox-web-debug  pre .class .title,
+#blackbox-web-debug  pre .smalltalk .class,
+#blackbox-web-debug  pre .javadoctag,
+#blackbox-web-debug  pre .yardoctag,
+#blackbox-web-debug  pre .phpdoc {
   text-decoration: underline;
 }
 
-#blackbox pre .symbol,
-#blackbox pre .ruby .symbol .string,
-#blackbox pre .ruby .symbol .keyword,
-#blackbox pre .ruby .symbol .keymethods,
-#blackbox pre .number {
+#blackbox-web-debug  pre .symbol,
+#blackbox-web-debug  pre .ruby .symbol .string,
+#blackbox-web-debug  pre .ruby .symbol .keyword,
+#blackbox-web-debug  pre .ruby .symbol .keymethods,
+#blackbox-web-debug  pre .number {
   color: #3387CC;
 }
 
-#blackbox pre .params,
-#blackbox pre .variable {
+#blackbox-web-debug  pre .params,
+#blackbox-web-debug  pre .variable {
   color: #3E87E3;
 }
 
-#blackbox pre .css .keyword,
-#blackbox pre .pseudo,
-#blackbox pre .tex .special {
+#blackbox-web-debug  pre .css .keyword,
+#blackbox-web-debug  pre .pseudo,
+#blackbox-web-debug  pre .tex .special {
   color: #CDA869;
 }
 
-#blackbox pre .css .class {
+#blackbox-web-debug  pre .css .class {
   color: #9B703F;
 }
 
-#blackbox pre .rules .keyword {
+#blackbox-web-debug  pre .rules .keyword {
   color: #C5AF75;
 }
 
-#blackbox pre .rules .value {
+#blackbox-web-debug  pre .rules .value {
   color: #CF6A4C;
 }
 
-#blackbox pre .css .id {
+#blackbox-web-debug  pre .css .id {
   color: #8B98AB;
 }
 
-#blackbox pre .annotation,
-#blackbox pre .apache .sqbracket,
-#blackbox pre .nginx .built_in {
+#blackbox-web-debug  pre .annotation,
+#blackbox-web-debug  pre .apache .sqbracket,
+#blackbox-web-debug  pre .nginx .built_in {
   color: #9B859D;
 }
 
-#blackbox pre .preprocessor {
+#blackbox-web-debug  pre .preprocessor {
   color: #8996A8;
 }
 
-#blackbox pre .hexcolor,
-#blackbox pre .css .value .number {
+#blackbox-web-debug  pre .hexcolor,
+#blackbox-web-debug  pre .css .value .number {
   color: #DD7B3B;
 }
 
-#blackbox pre .css .function {
+#blackbox-web-debug  pre .css .function {
   color: #DAD085;
 }
 
-#blackbox pre .diff .header,
-#blackbox pre .chunk,
-#blackbox pre .tex .formula {
+#blackbox-web-debug  pre .diff .header,
+#blackbox-web-debug  pre .chunk,
+#blackbox-web-debug  pre .tex .formula {
   background-color: #0E2231;
   color: #F8F8F8;
   font-style: italic;
 }
 
-#blackbox pre .diff .change {
+#blackbox-web-debug  pre .diff .change {
   background-color: #4A410D;
   color: #F8F8F8;
 }
 
-#blackbox pre .addition {
+#blackbox-web-debug  pre .addition {
   background-color: #253B22;
   color: #F8F8F8;
 }
 
-#blackbox pre .deletion {
+#blackbox-web-debug  pre .deletion {
   background-color: #420E09;
   color: #F8F8F8;
 }
