@@ -170,6 +170,19 @@ class BlackBox
      */
     public static function init()
     {        
+		// scripts and styles
+        wp_register_style("blackbox-css", plugins_url()."/blackbox-debug-bar/public/styles.css");
+        
+        wp_register_script("blackbox-js", plugins_url()."/blackbox-debug-bar/public/highlight.pack.js", array("jquery"));
+        wp_register_script("blackbox-highlight", plugins_url()."/blackbox-debug-bar/public/blackbox.js", array("jquery"));
+		
+		wp_enqueue_style("blackbox-css");
+		
+		wp_enqueue_script("blackbox-js");
+		wp_enqueue_script("blackbox-highlight");
+		
+	
+		// init profiler
         add_filter("all", array("BlackBox_Hook", "profiler"));
         apply_filters('debug', 'Profiler Initiaded');
         apply_filters('debug', 'Profiler Noise');

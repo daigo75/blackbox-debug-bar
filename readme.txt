@@ -2,10 +2,12 @@
 Contributors: gwin
 Tags: debugging, debug bar
 Requires at least: 3.0.0
-Tested up to: 3.0.4
+Tested up to: 3.5.1
 Stable tag: trunk
 
-BlackBox is a plugin for plugin and theme developers. It collects and displays useful debug information (errors, executed queries, globals, profiler)
+BlackBox is a plugin for plugin and theme developers. It collects and displays useful debug information (errors, executed queries, globals, profiler).
+
+The icons are property of http://www.gentleface.com/free_icon_set.html, used on Creative Commons Attribution-NonCommercial license.
 
 == Description ==
 

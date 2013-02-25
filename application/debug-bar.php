@@ -18,49 +18,14 @@ foreach($bb->getErrors() as $error) {
 
 ?>
 
-<script type="text/javascript" src="<?php bloginfo("wpurl") ?>/wp-content/plugins/blackbox-debug-bar/public/highlight.pack.js"></script>
-<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo("wpurl") ?>/wp-content/plugins/blackbox-debug-bar/public/styles.css" />
-
-<script type="text/javascript">
-
-hljs.initHighlightingOnLoad();
-
-var WpDebugBar = {
-
-    element: ['globals', 'profiler', 'database', 'errors'],
-
-    open: null,
-
-    switchPanel: function(open) {
-
-        for(var i in WpDebugBar.element) {
-            document.getElementById("blackbox-"+WpDebugBar.element[i]).style.display = "none";
-        }
-
-        if(open == WpDebugBar.open) {
-            WpDebugBar.open = null
-            return;
-        }
-
-        WpDebugBar.open = open;
-        document.getElementById("blackbox-"+open).style.display = "block";
-    },
-
-    close: function() {
-        document.getElementById("blackbox-web-debug").style.display = "none";
-    }
-
-}
-
-</script>
-
 <div id="blackbox-web-debug">
 &nbsp;
 <a href="javascript:WpDebugBar.switchPanel('globals')" class="globals">Globals</a>
 <a href="javascript:WpDebugBar.switchPanel('profiler')" class="profiler">Profiler (<?php echo $time ?> ms)</a>
-<a href="javascript:WpDebugBar.switchPanel('database')" class="database">SQL (<?php echo $sqlC ?> queries in <?php echo number_format($sqlT*1000, 2) ?> ms)</a>
+<a href="javascript:WpDebugBar.switchPanel('database')" class="database">SQL (<span class="qnum"><?php echo $sqlC ?></span> queries in <span class="qtime"><?php echo number_format($sqlT*1000, 2) ?></span> ms)</a>
 <a href="javascript:WpDebugBar.switchPanel('errors')" class="errors">Errors (<?php echo $err; if($errI>0) echo ", $errI!" ?>)</a>
-<a href="javascript:WpDebugBar.close()" class="close">Close Toolbar</a>
+<a href="#" class="toggle off">Toggle</a>
+<a href="javascript:WpDebugBar.close()" class="close">Close</a>
 
 <div id="blackbox-globals" class="debug-panel">
 <pre><code class="php">$_GET = <?php echo esc_html(var_export($bb->getGlobal("get"), true)) ?>;</code></pre><br/>
@@ -86,6 +51,13 @@ var WpDebugBar = {
 </div>
 
 <div id="blackbox-database" class="debug-panel">
+<form action="" method="get" class="blackbox-filter">
+	<label for="bb_query_filter">Find queries containing</label>
+	<input type="text" name="bb_query_filter" id="bb_query_filter" value="" />
+	
+	<label for="bb_query_min_time">Min. Execution Time</label>
+	<input type="text" name="bb_query_min_time" id="bb_query_min_time" value="" />
+</form>
 <table>
     <tbody>
         <?php foreach($wpdb->queries as $q): ?>

@@ -1,15 +1,26 @@
 #blackbox-web-debug  {
-    position:fixed;
-    top: 0;
+    background: #464646;
+    color: #CCCCCC;
+    direction: ltr;
+    font: 13px/28px sans-serif;
+    height: 28px;
     left: 0;
-    width:100%;
-    background-color: black;
-    opacity: 0.9;
-    font-size:12px;
-    font-family: Tahoma, Arial;
-    color: white;
-    padding:3px 0px;
+    position: fixed;
+    top: 0;
+    width: 100%;
     z-index: 100000;
+}
+
+#blackbox-web-debug.mini {
+	width: auto;
+}
+
+#blackbox-web-debug.mini > a {
+	display:none;
+}
+
+#blackbox-web-debug.mini > a.toggle {
+	display:inline;
 }
 
 #blackbox:hover {
@@ -30,6 +41,7 @@
     display:none;
     padding: 5px;
     font-family: "Lucida Console";
+	background: linear-gradient(to top, #373737 0px, #464646 5px) repeat scroll 0 0 #464646;
 
 }
 
@@ -76,10 +88,28 @@
     background-image: url(icons/delete.png);
     background-repeat: no-repeat;
 }
+#blackbox-web-debug  .toggle.off {
+    background-image: url(icons/minimize.png);
+    background-repeat: no-repeat;
+}
+#blackbox-web-debug  .toggle.on {
+    background-image: url(icons/expand.png);
+    background-repeat: no-repeat;
+}
 
 #blackbox-web-debug  pre{
     padding:0;
     margin: 0px 0px 0px 0px
+}
+
+.blackbox-filter {
+	padding: 0px 0px 10px 15px
+}
+
+.blackbox-filter input[type=text] {
+	background-color: silver;
+	padding: 3px;
+	border: 1px solid gray;
 }
 
 /*
@@ -91,13 +121,13 @@ Sunburst-like style (c) Vasily Polovnyov <vast@whiteants.net>
 #blackbox-web-debug  pre code {
   font: 12px / 14px 'Lucida Console', 'courier new', monospace !important;
   color: #f8f8f8;
-  background: #000 !important;
+  background: #464646 !important;
   padding: 0px !important;
   margin: 0px !important;
 }
 
 #blackbox-web-debug  pre {
-  background: #000 !important;
+  background:  #464646 !important;
 }
 
 #blackbox-web-debug  pre .comment,
