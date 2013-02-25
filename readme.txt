@@ -14,11 +14,11 @@ The icons are property of http://www.gentleface.com/free_icon_set.html, used on 
 BlackBox is symfony like unobstrusive debug bar attached to the top of the browser window.
 
 How can it help you with development:
-* instantly inspect global variables (GET, POST, COOKIE, SERVER)
-* debug both frontend and admin area
-* executed MySQL queries and time it took to execute each query (useful for finding slow queries)
-* profiler for measuring performance of your plugins and themes
-* errors occurred when loading WordPress page
+1. instantly inspect global variables (GET, POST, COOKIE, SERVER)
+2. debug both frontend and admin area
+3. executed MySQL queries and time it took to execute each query (useful for finding slow queries)
+4. profiler for measuring performance of your plugins and themes
+5. errors occurred when loading WordPress page
 
 == Installation ==
 
