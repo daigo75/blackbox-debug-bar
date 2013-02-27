@@ -12,7 +12,7 @@
 }
 
 #blackbox-web-debug.mini {
-	width: auto;
+	width: 40px;
 }
 
 #blackbox-web-debug.mini > a {
@@ -21,6 +21,7 @@
 
 #blackbox-web-debug.mini > a.toggle {
 	display:inline;
+	padding-right: 0px;
 }
 
 #blackbox:hover {
@@ -41,7 +42,12 @@
     display:none;
     padding: 5px;
     font-family: "Lucida Console";
-	background: linear-gradient(to top, #373737 0px, #464646 5px) repeat scroll 0 0 #464646;
+	background: #464646;
+	background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0,#373737),color-stop(18%,#464646));
+	background-image: -webkit-linear-gradient(bottom,#373737 0,#464646 5px);
+	background-image: -moz-linear-gradient(bottom,#373737 0,#464646 5px);
+	background-image: -o-linear-gradient(bottom,#373737 0,#464646 5px);
+	background-image: linear-gradient(to top,#373737 0,#464646 5px);
 
 }
 
