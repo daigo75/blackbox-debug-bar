@@ -4,6 +4,7 @@
  * Main BlackBox class
  *
  * @author Grzegorz Winiarski
+ * @author Diego Zanella
  * @package BlackBox
  * @license GPL
  */
@@ -169,21 +170,26 @@ class BlackBox
      * @return null
      */
     public static function init()
-    {        
+    {
 		// init profiler
         add_filter("all", array("BlackBox_Hook", "profiler"));
-        apply_filters('debug', 'Profiler Initiaded');
+        apply_filters('debug', 'Profiler Initialised');
         apply_filters('debug', 'Profiler Noise');
 
-		add_action('init', array('BlackBox', 'init_scripts_styles'));
+				add_action('init', array('BlackBox', 'init_scripts_styles'));
         add_action('admin_footer', array("BlackBox_Hook", "footer"));
         add_action('wp_footer', array("BlackBox_Hook", "footer"));
 
         set_error_handler(array("BlackBox", "errorHandler"), E_ALL | E_STRICT);
     }
-	
+
 	public static function init_scripts_styles()
     {
+			// Don't display the bar to non-Admins
+			if(!current_user_can('manage_options')) {
+				return;
+			}
+
         wp_register_script("blackbox-js", plugins_url()."/blackbox-debug-bar/public/highlight.pack.js", array("jquery"));
         wp_register_script("blackbox-highlight", plugins_url()."/blackbox-debug-bar/public/blackbox.js", array("jquery"));
 
@@ -194,4 +200,3 @@ class BlackBox
 		wp_enqueue_script("blackbox-highlight");
 	}
 }
-
