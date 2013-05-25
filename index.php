@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: BlackBox
-Plugin URI: http://ditio.net/
+Plugin URI: https://github.com/daigo75/blackbox-debug-bar
 Description: BlackBox is designed for WordPress plugin and theme developers, it uses unobstrusive box that contatins useful informatiom (executed queries, global variables, notices, warnings and profiler). BlackBox should be used in development environment only
 Author: Grzegorz Winiarski, Diego Zanella
-Version: 0.1.4
-Author URI: http://ditio.net/, http://dev.pathtoenlightenment.net
+Version: 0.1.5
+Author URI: http://ditio.net/
 */
 
 if(!defined("SAVEQUERIES")) {

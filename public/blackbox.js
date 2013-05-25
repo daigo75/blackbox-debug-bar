@@ -24,7 +24,7 @@ var WpDebugBar = {
     close: function() {
         document.getElementById("blackbox-web-debug").style.display = "none";
     },
-	
+
 	createCookie: function (name,value,days) {
 		if (days) {
 			var date = new Date();
@@ -53,29 +53,36 @@ var WpDebugBar = {
 }
 
 jQuery(function($) {
+	var DebugBar = $("#blackbox-web-debug");
+	DebugBar.find("a.toggle").click(function() {
+		var DebugBarToggle = $(this);
 
-	$("#blackbox-web-debug a.toggle").click(function() {
-	
-		if($(this).hasClass("off")) {
-			$(this).removeClass("off");
-			$(this).addClass("on");
-			$("#blackbox-web-debug").addClass("mini");
-			$(this).text("");
-			$("#blackbox-web-debug > div.debug-panel").hide();
+		if(DebugBarToggle.hasClass("off")) {
+			DebugBarToggle
+				.removeClass("off")
+				.addClass("on")
+				.text("");
+
+			DebugBar
+				.addClass("mini")
+				.find("> div.debug-panel")
+				.hide();
+
 			WpDebugBar.createCookie("bb_toggle", "on");
 		} else {
-			$(this).addClass("off");
-			$(this).removeClass("on");
-			$("#blackbox-web-debug").removeClass("mini");
-			$(this).text("Toggle");
+			DebugBarToggle
+				.addClass("off")
+				.removeClass("on")
+				.text("Toggle");
+			DebugBar.removeClass("mini");
 			WpDebugBar.createCookie("bb_toggle", "off");
 		}
-	
+
 		return false;
 	});
-	
+
 	$("#bb_query_min_time, #bb_query_filter").keyup(function() {
-	
+
 		var time = parseFloat($("#bb_query_min_time").val());
 		var query = $("#bb_query_filter").val();
 		var qnum = 0;
@@ -85,7 +92,7 @@ jQuery(function($) {
 		$("#blackbox-database tr").each(function() {
 			var t = parseFloat($(this).find(".number").text().replace(" [ms]", ""));
 			var q = $(this).find(".sql").text().indexOf(query);
-			
+
 			if(time > 0 && query.length > 0 && t < time && q == -1) {
 				$(this).hide();
 			} else if(time > 0 && t < time) {
@@ -97,22 +104,30 @@ jQuery(function($) {
 				qtime += t;
 			}
 		});
-		
+
 		$(".qnum").text(qnum);
 		$(".qtime").text(qtime.toFixed(2));
-		
+
 		WpDebugBar.createCookie("bb_query_filter", query);
 		WpDebugBar.createCookie("bb_query_min_time", $("#bb_query_min_time").val());
 	});
-	
-	
+
+
 	// init
 	if(WpDebugBar.readCookie("bb_toggle") == "on") {
 		$("#blackbox-web-debug a.toggle").click();
 	}
-	
+
 	$("#bb_query_filter").val(WpDebugBar.readCookie("bb_query_filter"));
 	$("#bb_query_min_time").val(WpDebugBar.readCookie("bb_query_min_time"));
-	
+
 	$("#bb_query_filter").keyup();
+
+	// If the Admin Bar is present, display the debug bar below it, instead of
+	// overlapping
+	var WPAdminBar = $('#wpadminbar');
+	if(WPAdminBar.length > 0) {
+		var DebugBarPosition = parseInt(DebugBar.css('top'));
+		DebugBar.css('top', DebugBarPosition + WPAdminBar.outerHeight() + 'px');
+	}
 });
